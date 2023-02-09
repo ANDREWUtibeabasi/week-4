@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div id="app">
+<header>
+    <h1 v-text="sitename"></h1>
+</header>
+<main>
+    <figure>
+        <!--bind 'src' attribute to the'product.image' in 'data'-->
+        <img v-bind:src="product.Image">
+    </figure>
+    <h2 v-text="product.title"></h2>
+    <p v-text="product.description"></p>
+
+    <p>Price: {{product.price}}</p>
+</main>
+
+    </div>
+
+
+
+<script type="text/javascript">
+
+    var webstore = new Vue({
+
+        el: '#app',
+        data: {
+            sitename: 'After School club',
+            product: {
+                id: 111,
+                title: "Math",
+                description:"LONDON",
+                price: 100,
+                Image: "images/math.jpg"
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>
